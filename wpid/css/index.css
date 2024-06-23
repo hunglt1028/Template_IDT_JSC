@@ -1,0 +1,16 @@
+#partner .item img {
+    width: 200px;
+    height: 50px;
+}
+
+#slideBanner .owl-pagination {
+    background-color: #d09f08;
+}
+
+#form-quick button {
+    line-height: 45px;
+}
+
+.cparallax {
+    height: 610px ! important;
+}
