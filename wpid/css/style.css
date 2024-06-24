@@ -2534,12 +2534,36 @@ Custom vertical inline menu
 .logo {
     width: 85px;
     float: left;
-    margin: 15px 20px 0 100px;
+    margin: 25px 20px 0 100px;
 }
-
+.simple-search select{
+    padding-right: 30px;
+    appearance: none; /* Ẩn mũi tên mặc định (Webkit) */
+    -moz-appearance: none; /* Ẩn mũi tên mặc định (Firefox) */
+    -ms-appearance: none; /* Ẩn mũi tên mặc định (Internet Explorer) */
+    height: 32px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed #034cab;
+}
+.simple-search select:focus-visible{
+    border-bottom: 1px dashed #034cab;
+    outline: none;
+}
+.select-warraper:after {
+    content: '\f107'; /* Mã Unicode cho biểu tượng mũi tên xuống của Font Awesome */
+    font-family: FontAwesome;
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #034cab;
+}
 .sitetitle {
     color: #fff;
-    margin: 55px 0 0 0;
+    margin: 25px 0 0 0;
     font-weight: 200;
     font-size: 22px;
     text-transform: uppercase;
@@ -2719,11 +2743,10 @@ address {
 }
 
 .btn-advanced-search {
+    margin-top: 10px;
+    float: right;
     color: #034cab;
-    padding-right: 20px;
     font-weight: 600;
-    text-align: right;
-    background-color: rgba(255, 255, 255, .6);
 }
 
 .advanced-search {

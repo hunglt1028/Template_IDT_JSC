@@ -40,33 +40,22 @@
         <section class="banner">
             <div class="container">
                 <div class="banner-cn">
-                    <a href="/pages/opac/wpid-home.html"><img src="img/logo.png" alt="OPAC | Tra cứu tài liệu"
+                    <a href="/"><img src="img/logo_IDT.png" alt="UCS|MỤC LỤC LIÊN HỢP"
                             class="logo" /></a>
-                    <h1 class="sitetitle">OPAC | Tra cứu tài liệu</h1>
-                    <a href="http://nlv.gov.vn" class="websiteback full-right">THƯ VIỆN QUỐC GIA VIỆT NAM</a>
+                    <h1 class="sitetitle">UCS|MỤC LỤC LIÊN HỢP</h1>
+                    <a href="/" class="websiteback full-right">Thư viện IDT Việt Nam</a>
                     <hr class="line" />
                     <div class="tab-content">
                         <div class="simple-search">
                             <div class="form-cn" id="form-quick">
                                 <div class="form-search row">
-                                    <div class="form-field field-select col-sm-3">
-                                        <div class="select">
-                                            <div class="select">
-                                                <span>Tìm nhanh</span>
-                                                <select id="cbSearchValueform-quick1">
-                                                    <option value="quick">Tìm nhanh</option>
-                                                    <option value="title">Nhan đề</option>
-                                                    <option value="author">Tác giả</option>
-                                                    <option value="keyword">Từ khóa</option>
-                                                    <option value="isbn">Số ISBN</option>
-                                                    <option value="class">Chỉ số phân loại</option>
-                                                    <option value="yearpub">Năm xuất bản</option>
-                                                </select>
-                                            </div>
-                                            <input id="cbSearchFieldform-quick1" type="hidden" value="title">
-                                            <input id="cbSearchTypeform-quick1" type="hidden" value="1">
-                                            <input id="cbTypeFieldform-quick1" type="hidden" value="fieldsearch">
-                                        </div>
+                                    <div class="select-warraper form-field field-select col-sm-3">
+                                        <select class="select" id="cbSearchValueform-quick1">
+                                            <option value="tv1">Thư viện 1</option>
+                                            <option value="tv2">Thư viện 2</option>
+                                            <option value="tv2">Thư viện 3</option>
+                                            <option value="tv2">Thư viện 4</option>
+                                        </select>
                                     </div>
                                     <div class="form-field col-sm-7">
                                         <label><span></span></label>
@@ -84,16 +73,22 @@
                                         <input id="txtTypeFieldform-quick2" type="hidden" value="Button">
                                     </div>
                                 </div>
+                                <span class="btn-advanced-search">Tìm kiếm nâng cao</span>
                             </div>
-                            <p class="btn-advanced-search">Tìm kiếm nâng cao</p>
                         </div>
                         <div class="advanced-search">
                             <div class="advanced-box">
                                 <div class="row">
+                                    
+                                    <div class="btn-simple-search hamburger hamburger--3dy is-active" id="hide-advance-search" role="navigation">
+                                        <div class="hamburger-box">
+                                            <div class="hamburger-inner"></div>
+                                        </div>
+                                    </div>
                                     <form action="#" method="get" class="form-horizontal form-search">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-6 " style="margin-top: 29px;">
                                             <div class="control-group">
-                                                <label class="label">Title</label>
+                                                <label class="label">Nhan Đề</label>
                                                 <div class="controls">
                                                     <input type="text" name="title" class="form-control" />
                                                 </div>
@@ -102,7 +97,7 @@
 
                                         <div class="col-sm-6">
                                             <div class="control-group">
-                                                <label class="label">Author(s)</label>
+                                                <label class="label">Tác Giả</label>
                                                 <div class="controls">
                                                     <input type="text" name="author" class="form-control" />
                                                 </div>
@@ -113,7 +108,7 @@
 
                                         <div class="col-sm-6">
                                             <div class="control-group">
-                                                <label class="label">Subject(s)</label>
+                                                <label class="label">Chủ đề</label>
                                                 <div class="controls">
                                                     <input type="text" name="subject" class="form-control" />
                                                 </div>
@@ -122,7 +117,7 @@
 
                                         <div class="col-sm-6">
                                             <div class="control-group">
-                                                <label class="label">ISBN</label>
+                                                <label class="label">ISBN/ISSN</label>
                                                 <div class="controls">
                                                     <input type="text" name="isbn" class="form-control"
                                                         placeholder="ISBN" />
@@ -134,54 +129,13 @@
 
                                         <div class="col-sm-6">
                                             <div class="control-group">
-                                                <label class="label">Collection Type</label>
+                                                <label class="label">Vị trí</label>
                                                 <div class="controls">
                                                     <select name="colltype" class="form-control">
-                                                        <option value="0">All Collections</option>
-                                                        <option value="CD-DVD">CD-DVD</option>
-                                                        <option value="Dictionary">Dictionary</option>
-                                                        <option value="Fiction">Fiction</option>
-                                                        <option value="History">History</option>
-                                                        <option value="Journal">Journal</option>
-                                                        <option value="Other">Other</option>
-                                                        <option value="Reference">Reference</option>
-                                                        <option value="Textbook">Textbook</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-6">
-                                            <div class="control-group">
-                                                <label class="label">Location</label>
-                                                <div class="controls">
-                                                    <select name="location" class="form-control">
-                                                        <option value="0">All Locations</option>
-                                                        <option value="Anatomy Department">Anatomy Department</option>
-                                                        <option value="Biochemistry Department">Biochemistry Department
-                                                        </option>
-                                                        <option value="Community Medicine Department">Community Medicine
-                                                            Department</option>
-                                                        <option value="DAMC Central Library, Faridpur">DAMC Central
-                                                            Library, Faridpur</option>
-                                                        <option value="Forensic Medicine Department">Forensic Medicine
-                                                            Department</option>
-                                                        <option value="Journal Section, DAMC Library">Journal Section,
-                                                            DAMC Library</option>
-                                                        <option value="Microbiology">Microbiology</option>
-                                                        <option
-                                                            value="Muktijoddha Corner, DAMC Central Library, Faridpur.">
-                                                            Muktijoddha Corner,
-                                                            DAMC Central Library, Faridpur.</option>
-                                                        <option value="Nestle Shelve, DAMC Central Library, Faridpur">
-                                                            Nestle Shelve, DAMC
-                                                            Central Library, Faridpur</option>
-                                                        <option value="Pathology Department">Pathology Department
-                                                        </option>
-                                                        <option value="Pharmacology Department">Pharmacology Department
-                                                        </option>
-                                                        <option value="Physiology Department">Physiology Department
-                                                        </option>
+                                                        <option value="0">Thư viện</option>
+                                                        <option value="0">Thư viện 1</option>
+                                                        <option value="0">Thư viện 2</option>
+                                                        <option value="0">Thư viện 3</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -193,15 +147,7 @@
                                                 <div class="controls">
                                                     <input type="hidden" name="searchtype" value="advance" />
                                                     <button type="submit" name="search" value="search"
-                                                        clas="btn btn-danger btn-block">Search</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="control-group">
-                                                <label></label>
-                                                <div class="controls">
-                                                    <p class="btn-simple-search">Tìm kiếm nhanh</p>
+                                                        clas="btn btn-danger btn-block">Tìm kiếm</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -213,19 +159,17 @@
                 </div>
 
                 <div id="main-content" class="well well-small">
-                    <div class="alert alert-info">Web Online Public Access Catalog - Use the search options to find
-                        documents quickly<div>Query took <b>0.00854</b> second(s) to complete</div>
+                    <div class="alert alert-info">Danh mục truy cập công cộng trực tuyến trên web - Sử dụng cá tùy chọn tìm kiếm để tìm tài liệu nhanh chóng<div>Tru vấn mất <b>0.00854</b> giây để hoàng thành</div>
                         <div><a href="#" class="xmlResultLink btn btn-success"
-                                target="_blank" title="View Result in XML Format" style="clear: both;">XML
-                                Result</a></div>
+                                target="_blank" title="View Result in XML Format" style="clear: both;">Kết quả XML</a></div>
                     </div>
                     <div class="biblioPaging">
                         <div class="pagination pagingList">
                             <ul>
                                 <li class="disabled"><a href="#">1</a></li>
                                 <li><a href="/?page=2" target="_self">2</a></li>
-                                <li><a href="/?page=2" target="_self">Next</a></li>
-                                <li><a href="/?page=2" target="_self">Last Page</a></li>
+                                <li><a href="/?page=2" target="_self">Sau</a></li>
+                                <li><a href="/?page=2" target="_self">Trang cuối</a></li>
                             </ul>
                         </div>
                     </div>
@@ -233,329 +177,329 @@
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Càng Bình Tĩnh Càng Hạnh Phúc</a></h4>
+                                    title="Xem chi tiết">Càng Bình Tĩnh Càng Hạnh Phúc</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Vãn Tình - Mỹ Linh - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Giá Như Có Ai Đó Dạy Tôi Trưởng Thành - Trưởng Thành Theo
+                                    title="Xem chi tiết">Giá Như Có Ai Đó Dạy Tôi Trưởng Thành - Trưởng Thành Theo
                                     Hệ 4.0</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Bloom - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="cover-list"><img src="./img/image.png"></div>
                         <div class="detail-list">
                             <h4><a href="#" class="titleField"
-                                    title="Record Detail">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
+                                    title="Xem chi tiết">Buông tay để con bay: giải pháp để con tự lập &amp; mẹ tự
                                     do</a></h4>
                             <div class="subItem authorField"><b>Tác giả</b> : Thu Hà - </div>
                             <div class="customField locationField"><b>Collection Location</b> : Thư viện 1</div>
                             <div class="subItem"><a href="#"
-                                    class="detailLink btn btn-small btn-default" title="Record Detail">Record Detail</a> <a
+                                    class="detailLink btn btn-small btn-default" title="Xem chi tiết">Xem chi tiết</a> <a
                                     href="#"
                                     class="xmlDetailLink btn btn-success btn-small" title="View Detail in XML Format"
-                                    target="_blank">XML Detail</a></div>
+                                    target="_blank">Xem chi tiết XML</a></div>
                         </div>
                     </div>
 
@@ -564,8 +508,8 @@
                             <ul>
                                 <li class="disabled"><a href="#">1</a></li>
                                 <li><a href="/?page=2" target="_self">2</a></li>
-                                <li><a href="/?page=2" target="_self">Next</a></li>
-                                <li><a href="/?page=2" target="_self">Last Page</a></li>
+                                <li><a href="/?page=2" target="_self">Sau</a></li>
+                                <li><a href="/?page=2" target="_self">Trang cuối</a></li>
                             </ul>
                         </div>
                     </div><br>
@@ -580,9 +524,9 @@
                 <div class="row clearfix">
                     <div class="col-md-12">
                         <a href="#" class="logo-header"><img alt="" src="img/logo.png"></a>
-                        <address><strong>THƯ VIỆN QUỐC GIA VIỆT NAM</strong><br>
-                            Địa chỉ: Số 31 – Tràng Thi – Hoàn Kiếm - Hà Nội<br>
-                            Điện thoại: 04-38255397 (tổng đài). E-mail: info@nlv.gov.vn<br>
+                        <address><strong>Thư việt IDT Việt Nam</strong><br>
+                            Địa chỉ: Số 3 ngõ 36 Trần Điền - Định Công - Hoàng Mai - Hà Nội<br>
+                            Điện thoại:  024.3222.2720. E-mail: contact@idtvietnam.vn<br>
                         </address>
                     </div>
                     <div class="col-md-3">
