@@ -898,14 +898,15 @@ header {
 }
 
 header .container {
-	width: 1460px
+	width: 1140px
 }
 
 #header-in {
 	display: flex;
 	height: 75px;
 	align-items: center;
-	justify-content: space-between
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 #header-left {
@@ -920,6 +921,7 @@ header .container {
 }
 
 #logo-wrap {
+	position: absolute;
 	display: flex;
 	width: 129px;
 	min-width: 100px;
@@ -979,13 +981,18 @@ header .container {
 
 /* Requested Change #96833*/
 #nav ul {
+	background: #150F4D;
+    height: auto;
+    overflow-y: visible;
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 100%;
 	margin: 0;
 	display: none;
-	z-index: 210
+	z-index: 210;
+	padding: 5px 15px 0px 15px;
+	width: max-content;
 }
 
 #nav ul a,
@@ -1135,7 +1142,7 @@ div.skiptranslate {
 	background: #150F4D;
 	padding: 24px 15px 25px;
 	text-align: center;
-	margin-top: 75px;
+	margin-top: 55px;
 	transition: all .3s
 }
 
@@ -1596,7 +1603,6 @@ div.skiptranslate {
 footer {
 	position: relative;
 	background: #150F4D;
-	padding-top: 60px
 }
 
 #footer-top .container {
@@ -2606,7 +2612,7 @@ footer {
 
 -----------------------------------------*/
 #slider {
-	height: 500px;
+	height: 400px;
 	position: relative;
 	overflow: hidden
 }
@@ -2677,7 +2683,7 @@ ul.tiny-carousel {
 	justify-content: space-between;
 	pointer-events: none;
 	top: auto;
-	bottom: 350px
+	bottom: 220px
 }
 
 #freeform #slider .tns-controls {
@@ -2793,7 +2799,8 @@ ul.tiny-carousel {
 	#nav li {
 		display: inline-flex;
 		align-items: center;
-		height: 100%
+		height: 100%;
+		position: relative;
 	}
 
 	#nav li:hover>ul {
@@ -2801,6 +2808,7 @@ ul.tiny-carousel {
 	}
 
 	#nav ul ul {
+		position: absolute;
 		display: block !important;
 		left: 100%;
 		top: 0;
@@ -3170,6 +3178,7 @@ ul.tiny-carousel {
 	}
 
 	#nav ul {
+		width: 100%;
 		display: none;
 		position: static;
 		column-count: 1;
@@ -3598,7 +3607,12 @@ ul.tiny-carousel {
 		margin: 0 0 20px
 	}
 }
-
+@media only screen and (max-width:576px) {
+	.footer-right{
+		padding-top: 10px;
+		text-align: left !important;
+	}
+}
 @media only screen and (max-width:479px) {
 	.modal-header {
 		padding: 30px 15px
@@ -3697,3 +3711,65 @@ ul.tiny-carousel {
 }
 
 /*Lib
+/*socical button*/
+.button-contact{
+	position: fixed;
+	right: 10px;
+	bottom: 0;
+	height: 250px;
+	width: 50px;
+	z-index: 100;
+}
+.btn-zalo, .btn-messenger{
+	margin-top: 15px;
+	background-color:rgba(33, 150, 243, 0.7);
+	border-radius: 40px;
+	animation: zoom 1.3s infinite;
+	box-shadow: 0 0 0 0 #2196F3;
+}
+
+.btn-youtube{
+	margin-top: 15px;
+	background-color:#c31d1d;
+	border-radius: 40px;
+	animation: zoom 1.3s infinite;
+	box-shadow: 0 0 0 0 #c31d1d;
+}
+.button-contact img{
+	width: 50px;
+	height: 50px;
+}
+@keyframes zoom{
+	0% {
+		transform: scale(.9);
+	}
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 15px transparent;
+	}
+	100% {
+		transform: scale(.9);
+		box-shadow: 0 0 0 0 transparent;
+	}
+}
+
+.footer-bottom{
+	padding-top: 10px;
+}
+.footer-bottom .container{
+	width: 1140px;
+}
+.footer-bottom .info-text{
+	color: #fff;
+	margin: 0px;
+}
+.footer-right{
+	text-align: right;
+}
+.footer-right .info-text{
+	padding: 5px 0px 10px 0px;
+}
+#btn-lien-ket-website{
+	background-color: #fff;
+	color: #150F4D !important;
+}

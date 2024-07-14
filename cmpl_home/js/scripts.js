@@ -256,32 +256,6 @@
 				}
 			});
 		});
-		$('#quick-links-carousel').each(function(i, el) {
-			var $el = $(el);
-			var quickLinksCount = $el.children().length;
-			function quickLinksItems(cnt) {return quickLinksCount > cnt ? cnt : quickLinksCount;}
-
-			tns({
-				container: el,
-				loop: false,
-				gutter: 35,
-				responsive: {
-					0: {
-						items: quickLinksItems(1),
-					},
-					480: {
-						items: quickLinksItems(2),
-					},
-					768: {
-						items: quickLinksItems(3),
-					},
-					992: {
-						items: quickLinksItems(4),
-					},
-					
-				}
-			});
-		});
 		$('#new-books').each(function(i, el) {
 			var $el = $(el);
 			var quickLinksCount = $el.children().length;
@@ -293,7 +267,7 @@
 				gutter: 0,
 				responsive: {
 					0: {
-						items: quickLinksItems(2),
+						items: quickLinksItems(1),
 					},
 					480: {
 						items: quickLinksItems(2),
@@ -445,10 +419,6 @@
 		$('#app-alert').slideUp(300);
 	})
 
-	// Menu scroll if long
-	if (!$('header #nav li .nav-in-wrap').length) {
-		$('header .first-level').wrapInner('<div class="nav-in-wrap"><div class="nav-in container"><div class="nav-in-menu-wrap"></div></div></div>');
-	}
 
 	/* For mega menu */
 	$('.nav-content').each(function(){
@@ -475,7 +445,7 @@
 			$('#logo-wrap').css('margin-top', 15);
 			$('#logo-wrap img').css('width', 129);
 
-			$('#search-wrap').css('margin-top', 75);
+			$('#search-wrap').css('margin-top', 55);
 		}
 	}
 
